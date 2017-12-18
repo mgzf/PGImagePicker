@@ -20,13 +20,13 @@ public class PGImagePickerKingfisher: PGImagePicker {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIApplication.shared.isStatusBarHidden = true
+        UIApplication.shared.setStatusBarHidden(true, with: .fade)
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        UIApplication.shared.isStatusBarHidden = false
+        UIApplication.shared.setStatusBarHidden(false, with: .fade)
     }
     
     override public func setupImageView(cell: PGCollectionViewCell, indexPath: IndexPath, imageView: UIImageView){
